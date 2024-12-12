@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Helloworld{
+    public static void main(String[] args) {
+        int number ; 
+        int mynumber = (int)(Math.random()*100) + 1;
+         Scanner sc = new Scanner(System.in);   
+         System.out.println("guess the number between 1 to 100 ");
+        
+         do{
+         number = sc.nextInt();
+         System.out.print("guess the number  : ");
+    
+         if (mynumber == number) {
+            System.out.println("BRAVO you guess the number correctly ");
+            break;
+         } else if (number > mynumber) {
+            System.out.println("YOUR NUMBER IS TOO LARGE TRY AGAIN  ");        
+         } 
+         else {
+            System.out.println("YOUR NUMBER IS TOO SMALL TRY AGAIN ");
+         }
+         } while (number>= 0);
+         
+         System.out.println("the correct number was : "+ mynumber);
+    }
+    }
